@@ -1,5 +1,31 @@
 ﻿/**
  * Composition example.
+ *
+ * Composition is a specific type of aggregation, that implies ownership
+ * of the object.
+ *
+ *     Association:
+ *     public class One {
+ *       void Fun(Two two) {
+ *         // ...
+ *       }
+ *     }
+ *
+ *     Aggregation:
+ *     public class One {
+ *       private Two _two;
+ *       void Fun(Two two) {
+ *         _two = two;
+ *       }
+ *     }
+ *
+ *     Composition:
+ *     public class One {
+ *       private Two _two;
+ *       void Fun() {
+ *         _two = new Two();
+ *       }
+ *     }
  */
 namespace Program
 {
